@@ -24,6 +24,9 @@ export class TodoService {
                   .map(response => {return response.json()});
    }
 
+   /*
+   * Adds a task to the database through an http post.
+   */
    addTask(name: string) {
      return this.http.post(`${this.tasksUrl}`, {name: name}, this.headers)
       .subscribe();
