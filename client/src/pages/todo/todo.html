@@ -8,7 +8,11 @@
   <h2>To Do List</h2>
   <ion-item>
     <ion-label fixed>New Item</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="name"></ion-input>
   </ion-item>
-  <button ion-button>Add Item</button>
+  <button ion-button (click)="addTask(name)">Add Item</button>
+
+  <ion-list>
+    <ion-item *ngFor="let todo of todos"> {{todo.name}} </ion-item>
+  </ion-list>
 </ion-content>
