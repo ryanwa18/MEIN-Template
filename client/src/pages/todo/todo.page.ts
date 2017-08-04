@@ -4,6 +4,8 @@ import { NavController } from 'ionic-angular';
 import { TodoService } from '../../services/todo.service';
 import { Todo } from '../../models/todo';
 
+import { AuthService } from '../../services/auth.service';
+
 @Component({
   selector: 'todo',
   templateUrl: 'todo.html',
@@ -13,7 +15,7 @@ export class TodoPage implements OnInit {
 
   private todos: Todo[];
 
-  constructor(public navCtrl: NavController, private todoService: TodoService) { }
+  constructor(public navCtrl: NavController, private todoService: TodoService, public auth: AuthService) { }
 
   /*
   * Initializes the page with the list of tasks.

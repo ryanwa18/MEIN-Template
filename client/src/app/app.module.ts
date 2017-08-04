@@ -5,7 +5,9 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { TodoPage } from '../pages/todo/todo.page';
-import { LoginPage } from '../pages/login/login';
+
+// This import is part of "Creating an Authentication Service"
+import { AuthService } from '../services/auth.service';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -13,8 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    TodoPage,
-    LoginPage
+    TodoPage
   ],
   imports: [
     BrowserModule,
@@ -24,13 +25,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    TodoPage,
-    LoginPage
+    TodoPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthService
   ]
 })
 export class AppModule {}
