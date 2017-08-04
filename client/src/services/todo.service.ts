@@ -27,8 +27,8 @@ export class TodoService {
    /*
    * Adds a task to the database through an http post.
    */
-   addTask(name: string) {
+   addTask(name: string): Observable<Todo> {
      return this.http.post(`${this.tasksUrl}`, {name: name}, this.headers)
-      .subscribe();
+      .map(response => {return response.json()});
    }
 }

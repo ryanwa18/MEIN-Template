@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ActivatedRoute } from '@angular/router';
 
 import { TodoService } from '../../services/todo.service';
 import { Todo } from '../../models/todo';
@@ -36,6 +35,6 @@ export class TodoPage implements OnInit {
   * Adds a task by making a server post.
   */
   addTask(name: string) {
-    this.todoService.addTask(name);
+    this.todoService.addTask(name).subscribe(todos => this.getTasks());
   }
 }
