@@ -10,24 +10,22 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them
 
-```
-Give examples
-```
+- Install [NodeJS](https://nodejs.org/en/download/) and follow the instructions for your operating system.
+- Install [MongoDB](https://www.mongodb.com/download-center#community) and follow the specific instructions.
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
+In order to begin using the client use the following commands to start the ionic project.
 ```
-Give the example
-```
-
-And repeat
-
-```
-until finished
+$ cd client
+$ npm install
+$ ionic serve
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+In order to begin using the api make sure Mongo is up and running on the default port and then use the following commands.
+
+```
+$ cd api
+$ npm install
+$ node server.js
+```
