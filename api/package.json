@@ -4,12 +4,14 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "@auth0/cordova": "^0.2.0",
+    "auth0-js": "^8.8.0",
     "body-parser": "^1.17.2",
     "cors": "^2.8.4",
     "express": "^4.15.3",
     "method-override": "^2.3.9",
     "mongodb": "^2.2.30",
-    "mongoose": "^4.10.8",
+    "mongoose": "4.10.8",
     "morgan": "^1.8.2"
   },
   "devDependencies": {},
