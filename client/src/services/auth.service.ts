@@ -6,11 +6,11 @@ import Auth0 from 'auth0-js';
 
 const auth0Config = {
   // needed for auth0
-  clientID: '91gcyFwRZDXwq4RA6DqxxcBfrQismyDB',
+  clientID: 'YOUR_CLIENT_ID',
 
   // needed for auth0cordova
-  clientId: '91gcyFwRZDXwq4RA6DqxxcBfrQismyDB',
-  domain: 'ryanward.auth0.com',
+  clientId: 'YOUR_CLIENT_ID',
+  domain: 'YOUR_DOMAIN',
   callbackURL: location.href,
   packageIdentifier: 'io.ionic.starter'
 };
